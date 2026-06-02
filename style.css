@@ -870,10 +870,6 @@ svg {
   word-break: break-word;
 }
 
-.social-zl {
-  width: 100%;
-  max-width: 100%;
-}
 
 @media (min-width: 768px) {
   .contact-card-zl {
@@ -953,6 +949,17 @@ svg {
   }
 }
 
+/* Móvil: 2×2 | Tablet/PC: 4 en una fila */
+.social-zl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+}
+
 .social-zl__btn {
   display: inline-flex;
   flex-direction: column;
@@ -960,17 +967,37 @@ svg {
   justify-content: center;
   gap: 0.35rem;
   min-width: 0;
-  flex: 1 1 calc(50% - 0.75rem);
-  max-width: 160px;
-  padding: 1rem 0.75rem;
+  flex: 1 1 calc(50% - 0.375rem);
+  max-width: calc(50% - 0.375rem);
+  padding: 1rem 0.5rem;
   border-radius: 14px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #fff !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .social-zl-block {
+    max-width: 920px;
+    padding: 2rem 1.5rem;
+  }
+
+  .social-zl {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .social-zl__btn {
+    flex: 1 1 0;
+    max-width: none;
+    min-width: 0;
+    padding: 1.15rem 0.65rem;
+    font-size: 0.8rem;
+  }
 }
 
 .social-zl__btn:hover {
