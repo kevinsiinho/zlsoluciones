@@ -1,12 +1,19 @@
 /* ZL Soluciones — estilos de marca (Bootstrap + Tailwind) */
 
 :root {
-  --zl-navy: #0a2d4a;
-  --zl-navy-dark: #061e33;
-  --zl-green: #1b6b3a;
-  --zl-green-light: #2d8a52;
-  --zl-green-bright: #3aa862;
+  /* Paleta del logo: azul marino + cian */
+  --zl-navy: #002147;
+  --zl-navy-dark: #001530;
+  --zl-accent: #00b5e2;
+  --zl-accent-light: #0096c7;
+  --zl-accent-bright: #4dd0f0;
+  /* Alias (compatibilidad) */
+  --zl-green: var(--zl-accent);
+  --zl-green-light: var(--zl-accent-light);
+  --zl-green-bright: var(--zl-accent-bright);
   --header-h: 96px;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 }
 
 html {
@@ -18,7 +25,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", system-ui, sans-serif;
+  font-family: var(--font-sans);
   color: #3d4f63;
   padding-top: var(--header-h);
   overflow-x: hidden;
@@ -67,7 +74,7 @@ svg {
 }
 
 .font-serif-zl {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--font-serif);
 }
 
 /* ===== Header profesional ===== */
@@ -109,11 +116,11 @@ svg {
 }
 
 .site-header.is-scrolled .site-header__link.active {
-  color: #7dd99a;
+  color: var(--zl-accent-bright);
 }
 
 .site-header.is-scrolled .site-header__link.active::after {
-  background: linear-gradient(90deg, #7dd99a, var(--zl-green-bright, #3aa862));
+  background: linear-gradient(90deg, var(--zl-accent-bright), var(--zl-accent));
 }
 
 .site-header.is-scrolled .site-header__toggle {
@@ -209,7 +216,7 @@ svg {
 
 .site-header__link:hover {
   color: var(--zl-green);
-  background: rgba(27, 107, 58, 0.06);
+  background: rgba(0, 181, 226, 0.06);
 }
 
 .site-header__link.active {
@@ -280,7 +287,7 @@ svg {
 
 .site-header__toggle:hover {
   border-color: var(--zl-green);
-  background: rgba(27, 107, 58, 0.04);
+  background: rgba(0, 181, 226, 0.04);
 }
 
 .site-header__toggle-line {
@@ -431,7 +438,7 @@ svg {
   }
 
   .site-header__link.active {
-    background: rgba(27, 107, 58, 0.08);
+    background: rgba(0, 181, 226, 0.08);
     border-left-color: var(--zl-green);
   }
 
@@ -457,7 +464,7 @@ svg {
 
   .site-header.is-scrolled.is-open .site-header__link.active {
     background: rgba(255, 255, 255, 0.1);
-    border-left-color: #7dd99a;
+    border-left-color: var(--zl-accent-bright);
   }
 }
 
@@ -472,13 +479,13 @@ svg {
   border: none;
   border-radius: 50px;
   padding: 0.85rem 1.75rem;
-  box-shadow: 0 4px 20px rgba(27, 107, 58, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 181, 226, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-zl:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(27, 107, 58, 0.45);
+  box-shadow: 0 8px 28px rgba(0, 181, 226, 0.45);
   color: #fff !important;
 }
 
@@ -761,7 +768,7 @@ svg {
 
 .stat-zl__num {
   display: block;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(1.75rem, 4vw, 2.25rem);
   font-weight: 700;
   color: var(--zl-green);
@@ -785,7 +792,7 @@ svg {
   gap: 1.25rem 2rem;
   padding: 2rem 1.75rem;
   background: #fff;
-  border: 2px solid rgba(27, 107, 58, 0.15);
+  border: 2px solid rgba(0, 181, 226, 0.15);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(10, 45, 74, 0.08);
   max-width: 100%;
@@ -806,7 +813,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(27, 107, 58, 0.1);
+  background: rgba(0, 181, 226, 0.1);
   color: var(--zl-green);
   border-radius: 14px;
 }
@@ -827,7 +834,7 @@ svg {
 }
 
 .ubicacion-card-zl__street {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: var(--font-serif);
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   font-weight: 700;
   color: var(--zl-navy);
@@ -880,7 +887,7 @@ svg {
 .contact-card-zl:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(10, 45, 74, 0.1);
-  border-color: rgba(27, 107, 58, 0.35);
+  border-color: rgba(0, 181, 226, 0.35);
   color: inherit;
 }
 
@@ -890,7 +897,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(27, 107, 58, 0.1);
+  background: rgba(0, 181, 226, 0.1);
   color: var(--zl-green);
   border-radius: 12px;
   margin-bottom: 1rem;
