@@ -1,4 +1,15 @@
 (function () {
+  /* Enlace único de WhatsApp con mensaje predefinido */
+  var WA_URL =
+    "https://wa.me/573106503324?text=" +
+    encodeURIComponent(
+      "Hola, me interesa conocer más sobre los servicios contables y financieros de ZL Soluciones."
+    );
+
+  document.querySelectorAll('a[href*="wa.me/573106503324"]').forEach(function (link) {
+    link.href = WA_URL;
+  });
+
   var header = document.getElementById("mainNav");
   var toggle = document.getElementById("headerToggle");
   var backdrop = document.getElementById("headerBackdrop");
